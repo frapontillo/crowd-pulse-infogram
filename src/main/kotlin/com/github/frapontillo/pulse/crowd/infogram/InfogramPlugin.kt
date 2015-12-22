@@ -54,6 +54,10 @@ public class InfogramPlugin : IPlugin<Message, Message, InfogramConfig>() {
         return PLUGIN_NAME
     }
 
+    override fun getInstance(): IPlugin<Message, Message, InfogramConfig> {
+        return InfogramPlugin()
+    }
+
     override fun getNewParameter(): InfogramConfig? {
         return InfogramConfig()
     }
